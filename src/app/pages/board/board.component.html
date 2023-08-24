@@ -1,0 +1,48 @@
+<div class="container-fluid pt-2">
+    <div class="row pt-5">
+        <div class="col-12">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h4>{{selectedProjectData.projectName}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="d-flex">
+                <div><input type="text" placeholder="Search Here"
+                        class="form-control ng-pristine ng-valid ng-touched">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row pt-1">
+        <div class="col" id="3" *ngFor="let staus of status">
+            <div class="card card-bg">
+                <div class="card-header border-0 py-1"> {{staus}} <span>  </span><!----></div>
+                <div class="card-body ticket-bg border" id="3"><!---->
+                    <div draggable="true" *ngFor="let ticket of filterTicket(staus)" class="card-Body-Hover m-1 rounded-1 task" >
+                        <div class="my-1 fw-bold"> {{ticket.summary}} </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <p class="text-muted space-font m-0 pointer"></p>
+                            </div>
+                            <div class="col-9 text-end">
+                                <p class="text-muted space-font m-0">{{ticket.assignedTo}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-end"><span>5
+                                    hrs</span></div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+     
+</div>

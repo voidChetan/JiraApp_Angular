@@ -1,0 +1,63 @@
+.main {
+    background-image: url(/assets/bg-img.jpg);
+    height: 100vh;
+}
+
+
+/* first col */
+.authfy-panel-left {
+    background-color: rgba(38, 43, 72, 0.92);
+    color: #ffffff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0px 3px 6px #1d2030;
+
+
+}
+
+.btn-facebook {
+    background: #3b5998;
+}
+
+.btn-twitter {
+    background: #00aced;
+    padding-right: 35px;
+}
+
+.btn-google {
+    padding-right: 23px;
+}
+
+/* second col */
+.remember-box {
+    padding-right: 69px;
+}
+
+.btn-lg {
+    margin-right: 90px;
+}
+
+.authfy-login {
+    padding-left: 60px;
+}
+
+.authfy-heading {
+    margin-right: 64px;
+    padding-top: 25px;
+}
+
+.main-row {
+    transform: translate(20%, 50%);
+}
+
+.form-group {
+    box-sizing: border-box;
+    box-shadow: skyblue;
+
+}
+
+.eyeicon {
+    position: absolute;
+    margin-left: 320px;
+    cursor: pointer;
+}

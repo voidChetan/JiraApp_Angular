@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-12 text-end">
+        <button class="btn btn-success btn-sm"  data-bs-toggle="modal" data-bs-target="#myModal">Create New Project</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3" *ngFor="let project of projectList">
+        <div class="card">
+            <div class="card-header bg-success">
+                {{project.shortName}}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        {{project.projectName}}
+                    </div>
+                    <div class="col-6">
+                        {{project.createdDate | date:'dd-MMM-yy'}}
+                    </div>
+                </div>
+              
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-success btn-sm">Edit</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content"> 
+        <div class="modal-header">
+          <h4 class="modal-title">New Project</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div> 
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-3">
+                <label for="">Short Name</label>
+                <input type="text" name="shortName" class="form-control" [(ngModel)]="projectObj.shortName">
+            </div>
+            <div class="col-5">
+                <label for="">Full  Name</label>
+                <input type="text" name="projectName" class="form-control" [(ngModel)]="projectObj.projectName">
+            </div>
+          </div>
+        </div> 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" (click)="onSave()">Save</button>
+        </div> 
+      </div>
+    </div>
+  </div>
